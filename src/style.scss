@@ -1,0 +1,12 @@
+$font: arial, sans-serif;
+$font-color: #313c45;
+
+body {
+  font-family: $font;
+  color: $font-color;
+}
+
+button {
+  background-color: white;
+  border: 1px solid black;
+}
