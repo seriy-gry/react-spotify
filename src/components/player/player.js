@@ -1,5 +1,6 @@
 import React from 'react';
 import PlayButton from '../common/playButton';
+import FollowButton from '../common/followButton';
 
 const Player = (props) => {
   const {
@@ -19,6 +20,7 @@ const Player = (props) => {
           {currentTrack.artists[0].name}
         </p>
         <PlayButton uri={currentUri} />
+        <FollowButton id={currentTrack.id} />
       </div>
     </div>
   );
