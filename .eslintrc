@@ -2,8 +2,18 @@
   "parser": "babel-eslint",
   "extends": ["airbnb"],
   "rules": {
+    "consistent-return": 0,
     "react/button-has-type": 0,
     "react/jsx-filename-extension": 0,
+    "react/prop-types": 0,
+    "react/jsx-props-no-spreading": 0,
     "no-undef": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": [
+        ["src", "./src"]
+      ]
+    }
   }
 }
