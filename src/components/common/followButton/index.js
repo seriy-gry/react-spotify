@@ -1,6 +1,10 @@
 import React from 'react';
 import { useListContext, useListDispatch, useLoginContext } from 'src/context';
 import { getUserSavedTracks, setFollowTrack, setUnfollowTrack } from 'src/utils';
+
+import heart from 'src/assets/img/heart.svg';
+import heartEmpty from 'src/assets/img/heart-empty.svg';
+
 import FollowButtonComponent from './followButton';
 
 function FollowButton({ id }) {
@@ -11,6 +15,7 @@ function FollowButton({ id }) {
 
   const isFollowed = list.some(({ track }) => id === track.id);
   const title = isFollowed ? 'Unfollow' : 'Follow';
+  const img = isFollowed ? heart : heartEmpty;
 
   const onClick = () => {
     const setTrack = isFollowed ? setUnfollowTrack : setFollowTrack;
@@ -26,6 +31,7 @@ function FollowButton({ id }) {
 
   return (
     <FollowButtonComponent
+      img={img}
       title={title}
       onClick={onClick}
     />

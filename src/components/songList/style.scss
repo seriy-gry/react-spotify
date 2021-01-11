@@ -1,0 +1,17 @@
+.song-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > ol {
+    max-height: 30vh;
+    overflow-y: auto;
+
+    & > li {
+      max-width: 500px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}

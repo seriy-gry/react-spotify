@@ -20,14 +20,14 @@ function Login() {
   const setToken = useLoginDispatch();
 
   useEffect(() => {
-    let newToken = localStorage.getItem('token');
+    let newToken = sessionStorage.getItem('token');
 
     if (!newToken) {
       newToken = hash.access_token;
       hash.access_token = null;
 
       if (newToken) {
-        localStorage.setItem('token', newToken);
+        sessionStorage.setItem('token', newToken);
       }
     }
     if (newToken) {
@@ -36,7 +36,7 @@ function Login() {
   });
 
   const handleLogout = () => {
-    localStorage.removeItem('token');
+    sessionStorage.removeItem('token');
     setToken(null);
   };
 

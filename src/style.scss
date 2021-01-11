@@ -1,12 +1,48 @@
 $font: arial, sans-serif;
-$font-color: #313c45;
+$black: #313c45;
+$grey: #d2d2d2;
+$white: white;
 
 html, body {
   height: 100%;
   padding: 0;
   margin: 0;
 
-  color: $font-color;
+  color: $black;
 
+  font-size: 14px;
   font-family: $font;
+}
+
+button, .login-button {
+  padding: 10px;
+  margin: 10px;
+
+  background-color: $white;
+  color: $black;
+  border: 1px solid $black;
+  border-radius: 20px;
+
+  text-decoration: none;
+  font-size: 14px;
+
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    box-shadow: 0 0 4px 0 $black;
+  }
+
+  &:active {
+    background-color: $grey;
+  }
+
+  & > img {
+    width: 1em;
+    height: 1em;
+  }
+}
+
+.icon-button {
+  line-height: 0;
 }
