@@ -9,7 +9,7 @@ function SongList() {
   const setList = useListDispatch();
 
   useEffect(() => {
-    if (!list.length) {
+    if (!list.length && token) {
       getUserSavedTracks(token)
         .then((data) => {
           if (data.items) {

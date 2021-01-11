@@ -17,9 +17,7 @@ const Player = (props) => {
     <div className="player">
       <img className="player__image" src={currentTrack.album.images[0].url} alt={currentTrack.album.name} />
       <p>{currentTrack.name}</p>
-      <p>
-        {currentTrack.artists[0].name}
-      </p>
+      <p>{currentTrack.artists[0].name}</p>
       <div>
         <PlayButton uri={currentUri} />
         <FollowButton id={currentTrack.id} />
